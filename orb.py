@@ -1,11 +1,11 @@
 import cv2 as cv
-import numpy as np
-gray1 =cv.imread ('lena_std.png', cv.IMREAD_GRAYSCALE) 
+gray1 =cv.imread ('angel_photo.jpg', cv.IMREAD_GRAYSCALE)
 cap = cv.VideoCapture(0)
 orb = cv.ORB_create()
 kpl, des1 = orb.detectAndCompute(gray1, None)
 while 1:
     ret, frame = cap.read()
+    
     gray2 = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     kp2, des2 = orb.detectAndCompute (gray2, None)
 
