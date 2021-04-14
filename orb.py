@@ -13,7 +13,7 @@ brute_force_matching = cv.BFMatcher(cv.NORM_HAMMING, crossCheck=True)
 matches = brute_force_matching.match(des1, des2) 
 matches = sorted (matches, key= lambda x:x.distance)
 
-matching_result= cv.drawatches(gray1, kpl, gray2, kp2, matches[:20], None)
+matching_result= cv.drawMatches(gray1, kpl, gray2, kp2, matches[:20], None)
 
 cv.imshow("Original GrayScale Image",gray1) 
 cv.imshow ("Printed Grayscale Image", gray2) 
