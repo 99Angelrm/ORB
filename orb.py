@@ -1,5 +1,5 @@
 import cv2 as cv   #importar la librería de open CV
-gray1 =cv.imread ('angel_photo.jpg', cv.IMREAD_GRAYSCALE) #Carga de la foto en escala de grises
+gray1 =cv.imread ('Foto_guicho.jpg', cv.IMREAD_GRAYSCALE) #Carga de la foto en escala de grises
 cap = cv.VideoCapture(0) #inicio de la captura de imágenes
 orb = cv.ORB_create() #crea el objeto orb
 kpl, des1 = orb.detectAndCompute(gray1, None) #Encuentra keypoints y descriptors with ORB
